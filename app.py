@@ -10,7 +10,7 @@ def creer_app():
     basedir = os.path.abspath(os.path.dirname(__file__))
     #print(os.environ.get("DATABASE_URL"))
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://bdd_users_user:Rou60uFLUKhvFt9OWvKyxQEDdCeIQHNh@dpg-ct6mtdg8fa8c73cge6d0-a.oregon-postgres.render.com/bdd_users"
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
     # URL DE LA BDD POSTGRESQL
     # postgresql://bdd_users_user:Rou60uFLUKhvFt9OWvKyxQEDdCeIQHNh@dpg-ct6mtdg8fa8c73cge6d0-a.oregon-postgres.render.com/bdd_users
     # Nom utl : bdd_users_user
